@@ -14,7 +14,7 @@ var _ = require('underscore');
  |
  */
 
-elixir.extend('apigen', function(baseDir, options) {
+elixir.extend('apigen', function(bin, options) {
 
     options = _.extend({
         clear: true, notify: true
@@ -22,7 +22,7 @@ elixir.extend('apigen', function(baseDir, options) {
 
     gulp.task('apigen', function() {
        gulp.src('')
-           .pipe(apigen('', options))
+           .pipe(apigen(bin, options))
            .pipe(notify({
                title: 'Complete!',
                message: 'Your ApiGen documentation has been generated!',
