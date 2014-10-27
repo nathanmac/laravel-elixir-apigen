@@ -7,14 +7,9 @@ var elixir = require('laravel-elixir');
 
 require('laravel-elixir-apigen');
 
-// Default
+// Default (Locally Installed, `vendor/bin/apigen`)
 elixir(function(mix) {
    mix.apigen();
-});
-
-// ApiGen Installed Locally
-elixir(function(mix) {
-   mix.apigen('vendor/bin/apigen');
 });
 
 // ApiGen Installed Globally
