@@ -13,3 +13,7 @@ elixir(function(mix) {
 ```
 
 This will scan any PHP classes in your 'app' folder for changes, and trigger your ApiGen documentation generator.
+
+## Additional Information
+
+For more information please refer to the [ApiGen documentation](http://apigen.org/).
