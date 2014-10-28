@@ -24,7 +24,7 @@ elixir.extend('apigen', function(bin, options) {
        gulp.src('')
            .pipe(apigen(bin, options))
            .pipe(notify({
-               title: 'Complete!',
+               title: 'ApiGen Complete!',
                message: 'Your ApiGen documentation has been generated!',
                icon: __dirname + '/../laravel-elixir/icons/pass.png'
            }));
