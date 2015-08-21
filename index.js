@@ -1,8 +1,7 @@
-var elixir = require('laravel-elixir');
-var gulp = require('gulp');
+var gulp   = require('gulp');
 var apigen = require('gulp-apigen');
-var notify = require('gulp-notify');
-var _ = require('underscore');
+var elixir = require('laravel-elixir');
+var config = elixir.config;
 
 /*
  |----------------------------------------------------------------
@@ -20,16 +19,10 @@ elixir.extend('apigen', function(bin, options) {
         clear: true, notify: true
     }, options);
 
-    gulp.task('apigen', function() {
+    new elixir.Task('apigen', function () {
        gulp.src('')
            .pipe(apigen(bin, options))
-           .pipe(notify({
-               title: 'ApiGen Complete!',
-               message: 'Your ApiGen documentation has been generated!',
-               icon: __dirname + '/../laravel-elixir/icons/pass.png'
-           }));
+           .pipe(new elixir.Notification('ApiGen Complete!'));
     });
-
-    this.queueTask('apigen');
 
 });
